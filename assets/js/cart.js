@@ -25,8 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (titleEl) titleEl.textContent = itemData.name;
     if (descEl) descEl.textContent = itemData.description;
+    
+    // Safe Image Path Formatting for Mobile and GitHub Pages Subpaths
     if (imgEl && itemData.image) {
-      imgEl.src = itemData.image;
+      let imagePath = itemData.image;
+      
+      // Ensure leading slash if relative
+      if (!imagePath.startsWith('http') && !imagePath.startsWith('/')) {
+        imagePath = '/' + imagePath;
+      }
+      
+      // Attach window.siteBaseUrl if present and not already prefixed
+      const baseUrl = window.siteBaseUrl || '';
+      if (baseUrl && !imagePath.startsWith(baseUrl)) {
+        imagePath = baseUrl + imagePath;
+      }
+
+      imgEl.src = imagePath;
+      
+      // Fallback image in case asset fails to load
+      imgEl.onerror = function() {
+        this.src = (window.siteBaseUrl || '') + '/assets/images/hero-bg.webp';
+      };
     }
     
     // Render option groups (radios/checkboxes) if available
