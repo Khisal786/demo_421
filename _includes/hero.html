@@ -1,0 +1,20 @@
+<section class="hero-section">
+  <div class="hero-video-wrapper">
+    <video class="hero-video" autoplay loop muted playsinline poster="{{ site.baseurl }}/assets/images/hero-bg.webp">
+      <source src="{{ site.baseurl }}/assets/hero.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-container">
+    <span class="hero-badge">Sizzling & Fresh Daily</span>
+    <h1 class="hero-title">{{ site.data.site_config.hero.headline }}</h1>
+    <p class="hero-subtitle">{{ site.data.site_config.hero.subheadline }}</p>
+    
+    <div class="hero-cta-group">
+      <a href="#menu-section" class="btn btn-primary">{{ site.data.site_config.hero.cta_primary }}</a>
+      <a href="#whatsapp-order" class="btn btn-secondary" onclick="openCartDrawer()">{{ site.data.site_config.hero.cta_secondary }}</a>
+    </div>
+  </div>
+</section>

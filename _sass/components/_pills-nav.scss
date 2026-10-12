@@ -1,0 +1,40 @@
+.sticky-pills-container {
+  position: sticky;
+  top: 57px; /* Just below header */
+  z-index: 90;
+  background: $bg-primary;
+  padding: 10px 16px;
+  border-bottom: 1px solid $border-color;
+  overflow: hidden;
+
+  .pills-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .pill-btn {
+      background: $bg-card;
+      border: 1px solid $border-color;
+      color: $text-muted;
+      padding: 6px 14px;
+      border-radius: $radius-full;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &.active {
+        background: $accent-primary;
+        color: white;
+        border-color: $accent-primary;
+      }
+    }
+  }
+}

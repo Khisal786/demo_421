@@ -1,0 +1,25 @@
+<div id="itemModal" class="modal-overlay" onclick="closeItemModal(event)">
+  <div class="modal-card" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeItemModal()">&times;</button>
+    <div class="modal-header">
+      <img id="modalImage" src="" alt="Item Image" class="modal-img" />
+      <h3 id="modalTitle" class="modal-title">Item Title</h3>
+      <p id="modalDescription" class="modal-desc">Item description goes here.</p>
+    </div>
+    <div class="modal-body">
+      <form id="modalOptionsForm">
+        <div id="modalOptionsContainer"></div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <div class="quantity-picker">
+        <button type="button" class="qty-btn" onclick="adjustModalQty(-1)">-</button>
+        <span id="modalQtyDisplay">1</span>
+        <button type="button" class="qty-btn" onclick="adjustModalQty(1)">+</button>
+      </div>
+      <button type="button" class="btn btn-add-cart" onclick="addModalItemToCart()">
+        Add to Order • <span id="modalTotalPrice">$0.00</span>
+      </button>
+    </div>
+  </div>
+</div>

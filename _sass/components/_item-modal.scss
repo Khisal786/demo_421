@@ -1,0 +1,122 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end; // Bottom sheet on mobile
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // Centered card on Desktop
+  @media (min-width: 768px) {
+    align-items: center;
+  }
+}
+
+.modal-card {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow-y: auto;
+  padding: 1.5rem;
+  position: relative;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .modal-overlay.active & {
+    transform: translateY(0);
+  }
+
+  @media (min-width: 768px) {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .modal-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-desc {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.modal-footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+
+  .quantity-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #282828;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+
+    .qty-btn {
+      background: none;
+      border: none;
+      color: #ff5252;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .btn-add-cart {
+    flex: 1;
+    background-color: #ff5252;
+    color: #fff;
+    border: none;
+    padding: 0.85rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

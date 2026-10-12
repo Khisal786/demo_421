@@ -1,0 +1,44 @@
+.site-footer {
+  background: $bg-primary;
+  border-top: 1px solid $border-color;
+  padding: 30px 16px;
+  text-align: center;
+
+  .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+
+      h4 {
+        font-size: 16px;
+        font-weight: 700;
+        color: $text-main;
+        margin: 0;
+      }
+    }
+
+    .footer-tagline {
+      font-size: 13px;
+      color: $text-muted;
+      margin: 0 0 16px 0;
+    }
+
+    .footer-meta {
+      font-size: 11px;
+      color: $text-muted;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .agency-credit {
+        color: $accent-secondary;
+      }
+    }
+  }
+}

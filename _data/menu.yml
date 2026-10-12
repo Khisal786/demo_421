@@ -1,0 +1,93 @@
+categories:
+  - id: "tacos"
+    name: "Street Tacos"
+    icon: "🌮"
+  - id: "hotdogs"
+    name: "Gourmet Hot Dogs"
+    icon: "🌭"
+  - id: "sides-drinks"
+    name: "Sides & Drinks"
+    icon: "🥤"
+
+items:
+  # TACOS
+  - id: "carne-asada-taco"
+    category: "tacos"
+    name: "Carne Asada Taco"
+    description: "Marinated citrus flank steak, diced white onions, fresh cilantro, and charred salsa verde on handmade corn tortillas."
+    price: 3.99
+    image: "/assets/images/dishes/carne-asada.webp"
+    popular: true
+    options:
+      - name: "Tortilla Type"
+        type: "radio"
+        choices:
+          - label: "Double Corn"
+            price: 0.00
+          - label: "Flour Tortilla"
+            price: 0.50
+      - name: "Add-Ons"
+        type: "checkbox"
+        choices:
+          - label: "Extra Queso Fresco"
+            price: 0.75
+          - label: "Fresh Guacamole"
+            price: 1.25
+
+  - id: "birria-quesataco"
+    category: "tacos"
+    name: "Quesabirria Taco"
+    description: "Slow-cooked shredded beef birria with melted Oaxaca cheese, onions, and cilantro. Served with rich consommé for dipping."
+    price: 4.75
+    image: "/assets/images/dishes/quesabirria.webp"
+    popular: true
+    options:
+      - name: "Consommé Cup"
+        type: "radio"
+        choices:
+          - label: "Standard Consommé"
+            price: 0.00
+          - label: "Large Consommé + Extra Cheese"
+            price: 1.50
+
+  # HOT DOGS
+  - id: "la-street-dog"
+    category: "hotdogs"
+    name: "Danger Dog (LA Street Dog)"
+    description: "Bacon-wrapped all-beef frank topped with grilled onions, bell peppers, pickled jalapeños, mayo, and mustard on a toasted brioche bun."
+    price: 6.99
+    image: "/assets/images/dishes/la-street-dog.webp"
+    popular: true
+    options:
+      - name: "Spice Level"
+        type: "radio"
+        choices:
+          - label: "Mild"
+            price: 0.00
+          - label: "Extra Pickled Jalapeños"
+            price: 0.50
+
+  - id: "chili-cheese-dog"
+    category: "hotdogs"
+    name: "Loaded Chili Cheese Dog"
+    description: "Grilled jumbo frank smothered in house-made beef chili, melted cheddar cheese, diced red onions, and sour cream."
+    price: 7.49
+    image: "/assets/images/dishes/chili-dog.webp"
+    popular: false
+
+  # SIDES & DRINKS
+  - id: "carne-asada-fries"
+    category: "sides-drinks"
+    name: "Carne Asada Loaded Fries"
+    description: "Crispy crinkle-cut fries loaded with marinated steak, melted cheese, guacamole, pico de gallo, and chipotle crema."
+    price: 9.99
+    image: "/assets/images/dishes/loaded-fries.webp"
+    popular: true
+
+  - id: "horchata"
+    category: "sides-drinks"
+    name: "House-Made Cinnamon Horchata"
+    description: "Traditional sweet rice milk flavored with real cinnamon and vanilla bean."
+    price: 3.50
+    image: "/assets/images/dishes/horchata.webp"
+    popular: false

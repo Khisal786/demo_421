@@ -1,0 +1,177 @@
+.whatsapp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .whatsapp-modal-sheet {
+    background: $bg-card;
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+
+    .modal-header {
+      padding: 16px;
+      border-bottom: 1px solid $border-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: $text-main;
+        margin: 0;
+      }
+
+      .close-modal-btn {
+        background: none;
+        border: none;
+        color: $text-muted;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+
+    .modal-body {
+      padding: 16px;
+      overflow-y: auto;
+      flex: 1;
+
+      .cart-empty-state {
+        text-align: center;
+        padding: 30px 0;
+        color: $text-muted;
+        font-size: 14px;
+      }
+
+      .cart-item-card {
+        background: $bg-primary;
+        border: 1px solid $border-color;
+        border-radius: 12px;
+        padding: 12px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .cart-item-details {
+          .cart-item-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: $text-main;
+            margin: 0 0 4px 0;
+          }
+
+          .cart-item-meta {
+            font-size: 12px;
+            color: $text-muted;
+            margin: 0 0 6px 0;
+          }
+
+          .cart-item-price {
+            font-size: 13px;
+            font-weight: 700;
+            color: $accent-primary;
+          }
+        }
+
+        .cart-item-actions {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          button {
+            background: $bg-card;
+            border: 1px solid $border-color;
+            color: $text-main;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+          }
+
+          span {
+            font-size: 14px;
+            font-weight: 700;
+            color: $text-main;
+          }
+        }
+      }
+    }
+
+    .modal-footer {
+      padding: 16px;
+      border-top: 1px solid $border-color;
+      background: rgba(18, 18, 20, 0.95);
+
+      .cart-total-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: $text-muted;
+        margin-bottom: 12px;
+
+        #cartGrandTotal {
+          font-size: 18px;
+          font-weight: 800;
+          color: $text-main;
+        }
+      }
+
+      .customer-info-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 12px;
+
+        .checkout-input {
+          background: $bg-primary;
+          border: 1px solid $border-color;
+          padding: 10px 14px;
+          border-radius: 8px;
+          color: $text-main;
+          font-size: 13px;
+
+          &::placeholder {
+            color: $text-muted;
+          }
+        }
+      }
+
+      .whatsapp-checkout-btn {
+        width: 100%;
+        background: #25d366; // Official WhatsApp green
+        color: white;
+        border: none;
+        padding: 14px;
+        border-radius: $radius-lg;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      }
+    }
+  }
+}
