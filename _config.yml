@@ -1,7 +1,7 @@
 title: "CaliCrush Street Tacos & Hot Dogs"
 email: "contact@calicrushtacos.com"
 description: "Authentic Mexican Street Tacos, Quesabirria, and LA Danger Dogs in Los Angeles."
-baseurl: "" # Keep empty for root domain or set to "/demo_421" if hosted on a subdirectory
+baseurl: "/demo_421" # Keep empty for root domain or set to "/demo_421" if hosted on a subdirectory
 url: "https://khisal786.github.io"
 
 # Build Settings
